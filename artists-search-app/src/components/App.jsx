@@ -26,7 +26,6 @@ function App() {
       <p>test</p>
       {/* <Link to="./pages/SearchResults">Press here</Link> */}
       <SearchBar
-        name={name}
         search={searchArtist} />
       <SearchResults
         artist={name} />
