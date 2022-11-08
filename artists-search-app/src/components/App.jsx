@@ -24,19 +24,18 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
 
-        <p>test</p>
-        {/* <Link to="./pages/SearchResults">Press here</Link> */}
-        <SearchBar
-          search={searchArtist} />
-        {/* <SearchResults
-          artist={name} /> */}
+      {/* <Link to="./pages/SearchResults">Press here</Link> */}
+      <Routes>
+        <Route path="/" element={<SearchBar search={searchArtist} />}>Home</Route>
+        <Route path="/searchresults" element={<SearchResults artist={name} />}>Search Results</Route>
+      </Routes>
 
-        <Routes>
-          <Route path="searchresults" element={<SearchResults artist={name} />} />
-        </Routes>
-      </BrowserRouter>
+      {/* <SearchBar
+        search={searchArtist} />
+      <SearchResults
+        artist={name} /> */}
+
     </div>
   );
 }
