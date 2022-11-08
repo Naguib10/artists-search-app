@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { useState } from 'react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 function SearchBar(props) {
 
@@ -23,7 +24,6 @@ function SearchBar(props) {
     function searchArtist() {
         props.search(artist.title);
         //console.log(artist);
-        //setArtist("");
     }
 
 
@@ -39,9 +39,11 @@ function SearchBar(props) {
                     value={artist.title}
 
                 />
-                <Button variant="outline-secondary" id="button-addon2" onClick={searchArtist}>
-                    Search
-                </Button>
+                <Link to="/searchresults">
+                    <Button variant="outline-secondary" id="button-addon2" onClick={searchArtist}>
+                        Search
+                    </Button>
+                </Link>
             </InputGroup>
         </>
     );

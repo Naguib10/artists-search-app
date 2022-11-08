@@ -1,6 +1,7 @@
 import SearchBar from "./SearchBar";
 import { useState } from "react";
 import SearchResults from "./SearchResults";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
@@ -23,12 +24,19 @@ function App() {
 
   return (
     <div className="App">
-      <p>test</p>
-      {/* <Link to="./pages/SearchResults">Press here</Link> */}
-      <SearchBar
-        search={searchArtist} />
-      <SearchResults
-        artist={name} />
+      <BrowserRouter>
+
+        <p>test</p>
+        {/* <Link to="./pages/SearchResults">Press here</Link> */}
+        <SearchBar
+          search={searchArtist} />
+        {/* <SearchResults
+          artist={name} /> */}
+
+        <Routes>
+          <Route path="searchresults" element={<SearchResults artist={name} />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
