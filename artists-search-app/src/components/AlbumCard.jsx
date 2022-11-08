@@ -4,8 +4,6 @@ import { Router, Link } from 'react-router-dom';
 
 function BasicExample(props) {
 
-
-
     return (
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src={props.img} />
@@ -15,8 +13,6 @@ function BasicExample(props) {
                     {/* Some quick example text to build on the card title and make up the
                     bulk of the card's content. */}
                 </Card.Text>
-                <Link to="/topalbums"><Button variant="primary">Top Albums</Button></Link>
-
             </Card.Body>
         </Card>
     );

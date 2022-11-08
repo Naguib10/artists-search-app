@@ -17,35 +17,34 @@ function SearchBar(props) {
                 [name]: value
             };
         })
-
-        //console.log(artist);
     }
 
     function searchArtist() {
         props.search(artist.title);
-        //console.log(artist);
     }
 
 
     return (
-        <>
-            <InputGroup className="mb-3 w-50">
-                <Form.Control
-                    placeholder="Search for Artist"
-                    aria-label="Recipient's username"
-                    aria-describedby="basic-addon2"
-                    name="title"
-                    onChange={handleChange}
-                    value={artist.title}
+        <div className="row">
+            <div className='col-md-4 m-auto'>
+                <InputGroup className="mb-3">
+                    <Form.Control
+                        placeholder="Search for Artist"
+                        aria-label="Recipient's username"
+                        aria-describedby="basic-addon2"
+                        name="title"
+                        onChange={handleChange}
+                        value={artist.title}
 
-                />
-                <Link to="/searchresults">
-                    <Button variant="outline-secondary" id="button-addon2" onClick={searchArtist}>
-                        Search
-                    </Button>
-                </Link>
-            </InputGroup>
-        </>
+                    />
+                    <Link to="/searchresults">
+                        <Button variant="outline-secondary" id="button-addon2" onClick={searchArtist}>
+                            Search
+                        </Button>
+                    </Link>
+                </InputGroup>
+            </div>
+        </div>
     );
 }
 

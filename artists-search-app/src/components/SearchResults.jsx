@@ -12,11 +12,14 @@ const SearchResults = (props) => {
             const response = await axios.get(
                 `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${props.artist}&api_key=2d9b6b622a720816152fe9586d35f271&format=json`);
             setArtists(response.data.results.artistmatches.artist);
-            //console.log(incomingArtist);
 
         } catch (error) {
             alert(error.message);
         }
+    }
+
+    function searchAlbums() {
+        
     }
 
     useEffect(() => {
