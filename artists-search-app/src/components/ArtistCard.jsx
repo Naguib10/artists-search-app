@@ -4,7 +4,11 @@ import { Router, Link } from 'react-router-dom';
 
 function BasicExample(props) {
 
+    const chosenArtist = props.title;
 
+    function searchAlbums() {
+        //console.log(chosenArtist);
+    }
 
     return (
         <Card style={{ width: '18rem' }}>
@@ -15,7 +19,7 @@ function BasicExample(props) {
                     {/* Some quick example text to build on the card title and make up the
                     bulk of the card's content. */}
                 </Card.Text>
-                <Link to="/topalbums"><Button variant="primary">Top Albums</Button></Link>
+                <Link to="/topalbums"><Button variant="primary" onClick={searchAlbums}>Top Albums</Button></Link>
 
             </Card.Body>
         </Card>
