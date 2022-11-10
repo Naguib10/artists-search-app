@@ -3,7 +3,6 @@ import { useState } from "react";
 import SearchResults from "./SearchResults";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TopAlbums from "./TopAlbums";
-import ArtistCard from "./ArtistCard";
 
 function App() {
 
@@ -26,7 +25,6 @@ function App() {
       <Routes>
         <Route path="/" element={<SearchBar search={searchArtist} />}>Home</Route>
         <Route path="/searchresults" element={<SearchResults artist={name} search={showAlbums} />}>Search Results</Route>
-        <Route element={<ArtistCard />}>Arist Card</Route>
         <Route path="/topalbums" element={<TopAlbums artist={chosenArtist} />}>Top Albums</Route>
       </Routes>
 
